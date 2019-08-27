@@ -1,0 +1,60 @@
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+body{
+    background: none repeat scroll 0 0 #eee;
+    color: #3e3333;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 960px;
+
+}
+h2 {
+  font-family: "Times New Roman", Times, serif;
+}
+input[type='text'], input[type='number'], input[type='date'] {
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  margin: 10px;
+  font-size: 1.2em;
+  padding-left:5px;
+  line-height:1.5;
+  width: 30%;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #777;
+}
+label,span.search{
+   margin: 10px;
+    color: #FF0000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+button {
+  margin: auto;
+  width: 10%;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  color: aliceblue;
+  background-color: grey;
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html ng-app = "flightSearch">
+<head>
+    <title>Flight Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="index.js" ></script>
+</head>
+<body>
+    <h2>Search for flights</h2>
+    <div id="content" ng-controller="MainCtrl">
+        Flight Number : <input type='number' ng-model='fNumber' placeholder="Enter the flight number" /><br>
+        Origin : <input type='text' ng-model='origin' placeholder="Enter the origin" /><br>
+        Destination : <input type='text' ng-model='destination' placeholder="Enter the destination" /><br>
+Date : <input type='date' ng-model='date' /><br>
+        <button class="search" ng-click="searchForFlights(fNumber, origin, destination, date)">Search</button>
+<span class ="search" ng-show="fNumberError">
+             Please enter either Flight Number or Origin and Destination!!!
+         <br></span>
+<span class ="search" ng-show="dateError">
+             Please enter Date!!!
+         <br></span>
+         <br><br><br>
+         <table ng-show="listOfFlights.length > 0">
+            <tr>
+                <th>Flight Number</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Aircraft</th>
+                <th>Distance</th>
+                <th>Travel time</th>
+                <th>Status</th>
+            </tr>
+            <tr ng-repeat="flight in listOfFlights">
+                <td>{{flight.flightNumber}}</td>
+                <td>{{flight.origin}}</td>
+                <td>{{flight.destination}}</td>
+                <td>{{flight.departure | date:"MM/dd/yyyy"}}</td>
+                <td>{{flight.arrival | date:"MM/dd/yyyy"}}</td>
+                <td>{{flight.aircraft}}</td>
+                <td>{{flight.distance}}</td>
+                <td>{{flight.travelTime}}</td>
+                <td>{{flight.status}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
